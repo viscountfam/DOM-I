@@ -38,5 +38,50 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// image sources
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const circularSnip = document.getElementById("cta-img");
+circularSnip.setAttribute('src', siteContent["cta"]["img-src"])
+
+const blockSnip = document.getElementById("middle-img");
+blockSnip.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// nav bar
+const nav1 = document.querySelector('a:first-child');
+nav1.textContent = siteContent["nav"]["nav-item-1"];
+
+const nav2 = document.querySelector('a:nth-child(2)');
+nav2.textContent = siteContent["nav"]["nav-item-2"];
+
+const nav3 = document.querySelector('a:nth-child(3)');
+nav3.textContent = siteContent["nav"]["nav-item-3"];
+
+const nav4 = document.querySelector('a:nth-child(4)');
+nav4.textContent = siteContent["nav"]["nav-item-4"];
+
+const nav5 = document.querySelector('a:nth-child(5)');
+nav5.textContent = siteContent["nav"]["nav-item-5"];
+
+const nav6 = document.querySelector('a:nth-child(6)');
+nav6.textContent = siteContent["nav"]["nav-item-6"];
+
+// cta section
+const ctaText = document.querySelector('h1');
+ctaText.textContent = siteContent["cta"]["h1"];
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent["cta"]["button"];
+
+//middle section
+//Features
+const features = document.querySelector('main-content, top-content, h4');
+features.textContent = siteContent["main-content"]["features-h4"]
+
+const featuresText = document.querySelector('main-content, top-content, p');
+featuresText.textContent = siteContent["main-content"]["features-content"]
+
+//About
+const About = document.querySelector('main-content, top-content, h4:nth-child(2)');
+About.textContent = siteContent["main-content"]["about-h4"]
