@@ -49,9 +49,11 @@ const blockSnip = document.getElementById("middle-img");
 blockSnip.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // nav bar
+let hover = 'nav a:hover{color: #D4AF37}';
 let navAll = document.querySelectorAll('nav a');
 navAll.forEach( element => {
   element.style.color = "lime"
+
 })
 
 let navAppend = document.createElement('a');
@@ -85,14 +87,22 @@ nav6.textContent = siteContent["nav"]["nav-item-6"];
 
 // cta section
 const ctaText = document.querySelector('h1');
+ctaText.style.color = "gold"
+ctaText.style.wordSpacing = "100vw"
 ctaText.textContent = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector('button');
+ctaButton.style.color = "#C0C0C0"
+ctaButton.style.background = "teal"
+ctaButton.style.fontWeight = "bold"
+ctaButton.style.borderRadius = "5px"
+ctaButton.style.border = "none"
 ctaButton.textContent = siteContent["cta"]["button"];
 
 //middle section
 //top-content
 //Features
+
 const features = document.querySelector('.main-content .top-content h4:first-child');
 features.textContent = siteContent["main-content"]["features-h4"]
 
