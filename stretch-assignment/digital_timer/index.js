@@ -27,9 +27,11 @@ function start_timer() {
 
     if (active) {
         var timer = document.getElementById("my_timer").innerHTML;
+        var arr = timer.split(":")
         let hour =arr[0];
         var min = arr[1];
         var sec = arr[2];
+        var millisec = arr[3];
     
 
         if (sec == 59) {
@@ -47,7 +49,10 @@ function start_timer() {
             if (sec < 10) sec = "0" + sec;
         }
         document.getElementById("my_timer").innerHTML = hour + ":" + min + ":" + sec;
-
+        setTimeout(start_timer, 1000);
+    }
+    if (sec == 30) {
+        thirtySec();
     }
 }
 
@@ -67,4 +72,23 @@ function changeState() {
 function reset() {
     document.getElementById("my_timer").innerHTML = "00" + ":" + "00" + ":" + "00";
     console.log("the timer has reset");
+}
+
+let audio = document.getElementById("myAudio");
+
+function playAudio() {
+    audio.play();
+}
+
+function pauseAudio() {
+    audio.pause();
+}
+
+function thirtySec() {
+        document.getElementById("my_timer").innerHTML = "00" + ":" + "00" + ":" + "00";
+        playAudio();
+        window.alert("30 seconds have elapsed");
+        active = false;
+        document.getElementById("control").innerHTML = "Start"
+        // setTimeout(start_timer, 30000)
 }
